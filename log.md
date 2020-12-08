@@ -1,0 +1,1 @@
+11.12.2020 learned about object method .values() and strung together with array methods .map() and .reduce()
