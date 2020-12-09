@@ -1,21 +1,26 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const data = [
   {
     sectionName: "Fixed Costs",
     inputs: [
       {
-        id: "flight",
+        name: "flight",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "you walking?",
       },
       {
-        id: "gear",
+        name: "gear",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "You need nothing??",
       },
       {
-        id: "insuance",
+        name: "insuance",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "No risk right?",
@@ -26,31 +31,36 @@ const data = [
     sectionName: "Daily Costs",
     inputs: [
       {
-        id: "food",
+        name: "food",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "MMMMMM",
       },
       {
-        id: "accomedation",
+        name: "accomedation",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "Mr. camper, where you sleeping?",
       },
       {
-        id: "transportation",
+        name: "transportation",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "Walking is overrated",
       },
       {
-        id: "activities",
+        name: "activities",
+        id: uuidv4(),
         type: "number",
         onChange: "",
         placeHolder: "You just sitting around?",
       },
       {
-        id: "Label",
+        name: "Label",
+        id: uuidv4(),
         type: "checkbox",
         onChange: "",
         placeHolder: "test?",

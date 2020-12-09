@@ -19,7 +19,7 @@ export default function Section({ data, sectionName }) {
           <Input
             inputType={input.type}
             onChange={testFunc}
-            name={input.id}
+            name={input.name}
             placeHolder={input.placeHolder}
           />
         );
