@@ -1,14 +1,14 @@
-import './App.css';
-import Form from './components/Form';
-import data from './data';
-console.log(data)
+import "./App.css";
+import Form from "./components/Form";
+import Header from './components/Header';
+import data from "./data";
+console.log(data);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Form data={data}/>
-      </header>
+    <div className="App-header App">
+      <Header />
+      <Form data={data} />
     </div>
   );
 }

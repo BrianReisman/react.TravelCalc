@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import Section from "./Section";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Form(props) {
   const data = props.data;
-  console.log(data)
-
-
-
-
+  // console.log(data);
 
   //states
   const [dailyTotal, setDailyTotal] = useState({
@@ -54,27 +51,15 @@ export default function Form(props) {
   let totalDaily = sumDaily * nights;
   // Learn about these: object.key/object.value
 
-
-
-
-
-
-
-
-
-
-
   //JSX return
   return (
     <div>
-    {data.map(cat => {
-      console.log(cat)
-      return <Section data={cat} sectionName={cat.sectionName}/>
-    })}
-      {/* <div>{`Trip Total: $${sumFixed}`}</div>
-      <div>{`Total: $${sumDaily}/per day`}</div>
-      <div>{`Trip (daily!) Total: $${totalDaily}`}</div>
-      <h2>{`Total Trip Costs.... ${totalDaily + sumFixed}`}</h2> */}
+      {data.map((cat) => {
+        {/* console.log(cat); */}
+        return (
+          <Section key={uuidv4()} data={cat} sectionName={cat.sectionName} />
+        );
+      })}
     </div>
   );
 }

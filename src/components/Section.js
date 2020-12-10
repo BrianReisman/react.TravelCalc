@@ -1,14 +1,24 @@
-//! I can make this a section component and reuse it for daily and fixed...? Feeding in different data props for h3 tag?
-
-import React from "react";
+import React, {useState} from "react";
 import Input from "./Input";
+import { v4 as uuidv4 } from 'uuid'; 
 
 export default function Section({ data, sectionName }) {
-  console.log(data);
+  const stateObj = {};
+  const makeSectionStateObj = () => {
+    const arrayOfInputs = data.inputs;
+    arrayOfInputs.forEach((input) => {
+      stateObj[input.name] = 0;
+    })
+  }
+  makeSectionStateObj();
 
+  const [sectionTotal, setSectionTotal] = useState(stateObj);
+console.log(sectionTotal);
+
+//This is a test function wired up to the onChange for each input
   const testFunc = (e) => {
     const { value } = e.target;
-    console.log(value);
+    setSectionTotal({...sectionTotal, [e.target.id]: value})
   };
 
   return (
@@ -17,7 +27,9 @@ export default function Section({ data, sectionName }) {
       {data.inputs.map((input) => {
         return (
           <Input
+            key={uuidv4()}
             inputType={input.type}
+            value={sectionTotal[input.name]}
             onChange={testFunc}
             name={input.name}
             placeHolder={input.placeHolder}

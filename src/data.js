@@ -38,7 +38,7 @@ const data = [
         placeHolder: "MMMMMM",
       },
       {
-        name: "accomedation",
+        name: "Accommodation",
         id: uuidv4(),
         type: "number",
         onChange: "",
@@ -67,6 +67,39 @@ const data = [
       },
     ],
   },
+  {
+    sectionName: "Maintaining Costs at Home",
+    inputs: [
+      {
+        name: "Housing",
+        id: uuidv4(),
+        type: "number",
+        onChange: "",
+        placeHolder: "rent/mort. utils, insurance",
+      },
+      {
+        name: "Health Insurance",
+        id: uuidv4(),
+        type: "number",
+        onChange: "",
+        placeHolder: "",
+      },
+      {
+        name: "Car Maint.",
+        id: uuidv4(),
+        type: "number",
+        onChange: "",
+        placeHolder: "payments, insurance, etc.",
+      },
+      {
+        name: "Other loans/recurring payments",
+        id: uuidv4(),
+        type: "number",
+        onChange: "",
+        placeHolder: "Student loans, credit card, etc",
+      },
+    ]
+  }
 ];
 
 export default data;
