@@ -25,6 +25,13 @@ const data = [
         onChange: "",
         placeHolder: "No risk right?",
       },
+      {
+        name: "test",
+        id: uuidv4(),
+        type: "radio",
+        onChange: "",
+        placeHolder: "No risk right?",
+      },
     ],
   },
   {
